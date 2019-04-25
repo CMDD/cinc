@@ -1,0 +1,14 @@
+.logo{
+    width: 90%;
+    margin: 0px 0 0 -14%;
+}
+
+.ftco-footer-widget {
+    border: 1px solid green;
+    
+}
+.ftco-footer-widget img{
+    border: 1px solid red;
+    width: 60%;
+ margin: 50% 10% 0 0;
+}
