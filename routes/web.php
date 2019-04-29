@@ -14,6 +14,8 @@
 Route::get('/', function () {return view('index');});
 Route::get('about', function () {return view('about');});
 Route::get('contact', function () {return view('contact');});
+Route::get('services', function () {return view('servicios');});
 
 // Admin
 Route::get('admin', function () {return view('admin.index');});
+Route::get('create-galeria', function () {return view('admin.create-galeria');});

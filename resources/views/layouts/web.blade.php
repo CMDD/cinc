@@ -40,7 +40,7 @@
 				<ul>
 					<li class=""><a href="/">HOME</a></li>
 					<li><a href="about">ABOUT US</a></li>
-					<li><a href="#">SERVICES</a></li>
+					<li><a href="/services">SERVICES</a></li>
 					<li><a href="/contact">CONTACT</a></li>
 				</ul>
 			</nav>

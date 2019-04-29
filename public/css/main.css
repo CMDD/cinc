@@ -8,7 +8,11 @@
     
 }
 .ftco-footer-widget img{
-    border: 1px solid red;
+    /* border: 1px solid red;
     width: 60%;
- margin: 50% 10% 0 0;
+ margin: 50% 10% 0 0; */
+}
+.cinco{
+    width: 100% !important;
+    
 }
