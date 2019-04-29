@@ -7978,7 +7978,8 @@ h1, h2, h3, h4, h5,
       color: #bfbfbf; }
 
 .ftco-bread .bread {
-  font-weight: 700;
+    font-weight: 300;
+    font-size: 5rem;
   color: #000000; }
 
 .blog-entry {
@@ -8066,7 +8067,7 @@ textarea.form-control {
 .ftco-footer {
   font-size: 14px;
   background: #242423;
-  padding: 6em 0; }
+  padding: 0; }
   .ftco-footer .ftco-footer-logo {
     text-transform: uppercase;
     letter-spacing: .1em; }
