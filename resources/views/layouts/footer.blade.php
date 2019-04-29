@@ -9,13 +9,10 @@
             </div>
             <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-            <h2 class="ftco-heading-2">Archives</h2>
+            <h2 class="ftco-heading-2">Contact Us</h2>
             <ul class="list-unstyled categories">
-            <li><a href="#">November 2018 <span>(105)</span></a></li>
-            <li><a href="#">October 2018 <span>(212)</span></a></li>
-            <li><a href="#">September 2018 <span>(150)</span></a></li>
-            <li><a href="#">August 2018 <span>(100)</span></a></li>
-            <li><a href="#">July 2018 <span>(200)</span></a></li>
+            <li><a href="#"> </a></li>
+            
             </ul>
             </div>
             </div>
