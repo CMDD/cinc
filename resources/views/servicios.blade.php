@@ -8,9 +8,6 @@
 	            <h1 class="mb-3 bread">Services</h1>
 	            <p>Specializing in the creation of exceptional events for private and corporate clients, we design, plan and manage every project from conception to execution <br><br>
 
-
-                Especializados en la creación de eventos excepcionales para clientes privados y corporativos, diseñamos, planificamos y manejamos cada proyecto desde la concepción hasta la ejecución.
-
 	        </div>
 				</div>
 			</section>
