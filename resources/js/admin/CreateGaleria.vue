@@ -7,14 +7,14 @@
       </h1>
       <ol class="breadcrumb">
         <li>
-          <router-link to="/dashboard">
+         
             <i class="fa fa-dashboard" ></i>Dashboard
-          </router-link>
+          
         </li>
         <li>
-        <router-link to="/suscripcion/lista">
+        
           <i class="fa fa-book" ></i>Galeria
-        </router-link>
+        
         </li>
         <li class="active" ><i class="fa fa-pencil"></i>Subir</li>
       </ol>
@@ -30,7 +30,7 @@
 
           <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">Crear producto</h3>
+              <h3 class="box-title">Subir Imagen</h3>
             </div>
             <!-- /.box-header -->
             <!-- form start -->
@@ -38,12 +38,13 @@
               <div class="box-body">
                 <div class="form-group col-md-6">
                   <label for="exampleInputEmail1">Nombre</label>
-                  <input type="text" class="form-control" v-model="form.name" required   placeholder="Ingresar nombre la imagen">
+                  <input type="text" class="form-control" v-model="form.nombre" required   placeholder="Ingresar nombre la imagen">
                 </div>
                 <div class="form-group col-md-6">
                   <label>Ubicación</label>
-                  <select class="form-control" @change="getCategories" required v-model="form.marca"  >
-                    <option value="">Home</option>
+                  <select class="form-control"  required v-model="form.ubicacion"  >
+                    <option value="">Seleccione...</option>
+                    <option value="Home">Home</option>
                   </select>
                 </div>
 
@@ -61,8 +62,8 @@
               <!-- /.box-body -->
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary" :disabled="enviando" >
-                  <span v-if="enviando">Creando...</span>
-                  <span v-else>Crear producto</span>
+                  <span v-if="enviando">Subiendo...</span>
+                  <span v-else>Subir Imagen</span>
                 </button>
               </div>
               </form>
@@ -96,71 +97,48 @@ toastr.options ={
         data(){
           return{
             enviando:false,
-            marcas:[],
-            categories:[],
-            subcategories:[],
             form:{
-              marca:'',
-              name:'',
-              subcategory:'',
-              category:'',
+              nombre:'',
+              ubicacion:'',
+              descripcion:'',
               image:'',
-              archivo:'',
-              description:''
+             
             }
 
           }
         },
         created(){
-          axios.get('api/marcas').then(res =>{
-              this.marcas = res.data;
-          });
+          
         },
         methods:{
-          getCategories(){
-            axios.get('api/categories/'+this.form.marca).then(res =>{
-                this.categories = res.data;
-            });
-
-          },
-          getsubcategory(){
-            axios.get('api/subcategories/'+this.form.category).then(res =>{
-                this.subcategories = res.data;
-            });
-
-          },
           img(event){
             this.form.image = this.$refs.file.files[0];
           },
-          archivo(event){
-            this.form.archivo = this.$refs.archivo.files[0];
-          },
           createProduct(){
             let fd = new FormData();
-            fd.append('marca',this.form.marca);
-            fd.append('name',this.form.name);
-            fd.append('subcategory',this.form.subcategory);
-            fd.append('category',this.form.category);
+            fd.append('nombre',this.form.nombre);
+            fd.append('ubicacion',this.form.ubicacion);
+            fd.append('descripcion',this.form.descripcion);
             fd.append('image',this.form.image);
-            fd.append('archivo',this.form.archivo);
-            fd.append('description',this.form.description);
 
-            axios.post('api/product/create',
+            axios.post('api/galeria/create',
                 fd,{
                   headers: {
                     'Content-Type': 'multipart/form-data'
                   }
               }).then(res=>{
+                console.log(res.data);
                 this.form = {
-                  marca:'',
-                  name:'',
-                  subcategory:'',
-                  category:'',
-                  image:'',
-                  archivo:'',
-                  description:''
+                  
+                  
+                  // nombre:'',
+                  // ubicacion:'',
+                  // subcategory:'',
+                  // descripcion:'',
+                  // image:'',
+                  
                 }
-              toastr.success('Producto creado correctamente');
+              toastr.success('Imagen subida correctamente');
 
             });
 

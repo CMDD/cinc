@@ -1,18 +1,101 @@
-.logo{
-    width: 90%;
-    margin: 0px 0 0 -14%;
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-.ftco-footer-widget {
-    border: 1px solid green;
-    
+.contact-info .info h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #767070;
 }
-.ftco-footer-widget img{
-    /* border: 1px solid red;
-    width: 60%;
- margin: 50% 10% 0 0; */
+.contact-info .info p {
+    margin: 0;
 }
-.cinco{
-    width: 100% !important;
+
+.contact-form span {
+    display: block;
+    margin-bottom: 5px;
+}
+.contact-form input[type=text] {
+    background: transparent!important;
+    border: 0;
+    border-bottom: 1px solid #C4C0C0;
+    height: 35px!important;
+    padding: 0 0.75rem;
+}
+
+.contact-form .btn {
+    margin: 0 0 0 auto;
+    display: block;
+}
+
+.footer-box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+.footer-box .logo {
+    flex: 1;
+    text-align: center;
+    white-space: nowrap;
+    min-width: 250px;
+    padding: 40px 0
+}
+.footer-box .logo >img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+}
+.footer-box .social {
+    display: block;
+    margin-top: 10px;
+}
+.footer-box .social a {
+    margin: 5px;
+}
+.footer-box .social a:hover {
+    opacity: .7;
+}
+.footer-box .contact {
+    flex: 1;
+    padding: 20px 0 40px 0;
+}
+.footer-box .contact h3 {
+    color: #fff;
+    font-weight: 300;
+}
+.footer-box .contact span {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+.footer-box .contact span img {
+    margin-right: 10px;
+}
+.footer-box .contact .angles {
+    margin-top: 50px;
+    max-width: 150px;
+}
+.footer-box .five {
+    flex: 1;
+    text-align: right;
+}
+.footer-box .five img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+@media (min-width: 768px) {
     
+    .footer-box {
+        flex-direction: row;
+    }
+
+    .footer-box .contact {
+        padding: 20px;
+    }
+
 }
